@@ -19,7 +19,7 @@ document.querySelector('#sidebar .toggle-sidebar').addEventListener('click', fun
 
 
 var options = {
-    strings: ['SysAdmin', 'Open source Technologies', 'Site Reliability Engineer', 'Hardware & Software', 'Infrastructure management'],
+    strings: ['SysAdmin', 'Open source Technologies', 'Site Reliability Engineer', 'Hardware and Software', 'Infrastructure management'],
     loop: true,
     typeSpeed: 70,
     backSpeed: 10
