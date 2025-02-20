@@ -21,8 +21,10 @@ document.querySelector('#sidebar .toggle-sidebar').addEventListener('click', fun
 var options = {
     strings: ['This is my Website'],
     loop: true,
-    typeSpeed: 70,
-    backSpeed: 10
+    typeSpeed: 100,
+    backSpeed: 50,
+    startDelay: 1000,
+    backDelay: 2000, 
 };
 
 new Typed('.field h2', options);
