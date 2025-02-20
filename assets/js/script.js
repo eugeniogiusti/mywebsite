@@ -21,10 +21,13 @@ document.querySelector('#sidebar .toggle-sidebar').addEventListener('click', fun
 var options = {
     strings: ['This is my Website'],
     loop: true,
-    typeSpeed: 100,
-    backSpeed: 50,
-    startDelay: 1000,
-    backDelay: 2000, 
+    typeSpeed: 150,     // Ancora più lento per la digitazione
+    backSpeed: 75,      // Più lento per la cancellazione
+    startDelay: 1000,   // Ritardo prima di iniziare
+    backDelay: 3000,    // Pausa più lunga prima della cancellazione
+    cursorChar: '|',    // Carattere del cursore più elegante
+    showCursor: true,   // Mostra il cursore
+    smartBackspace: false, // Cancella tutto invece di solo i caratteri diversi
 };
 
 new Typed('.field h2', options);
