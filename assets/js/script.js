@@ -21,10 +21,10 @@ document.querySelector('#sidebar .toggle-sidebar').addEventListener('click', fun
 var options = {
     strings: ['This is my Website'],
     loop: true,
-    typeSpeed: 500,     
-    backSpeed: 300,     
-    startDelay: 3000,   
-    backDelay: 8000,    
+    typeSpeed: 300,     // Estremamente lento per la digitazione
+    backSpeed: 200,     // Molto lento per la cancellazione
+    startDelay: 2000,   // 2 secondi prima di iniziare
+    backDelay: 6000,    // 6 secondi di pausa prima della cancellazione
     cursorChar: '|',    
     showCursor: true,   
     smartBackspace: false,
