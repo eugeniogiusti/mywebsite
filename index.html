@@ -67,31 +67,47 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 info">
-                         <svg viewBox="0 0 150 40" xmlns="http://www.w3.org/2000/svg">
-        <text x="20" y="25" 
-            font-family="Arial, sans-serif" 
-            font-size="18" 
-            font-weight="bold" 
-            fill="#60a5fa">
-            Tech<tspan fill="#22d3ee">Fix</tspan>
-        </text>
-        <g transform="translate(100, 18) scale(0.25)">
-            <path d="M 0,-20 L 5,-5 L 20,0 L 5,5 L 0,20 L -5,5 L -20,0 L -5,-5 Z" 
-                fill="#22d3ee" 
-                transform="rotate(45)">
-                <animateTransform attributeName="transform"
-                                attributeType="XML"
-                                type="rotate"
-                                from="45 0 0"
-                                to="405 0 0"
-                                dur="10s"
-                                repeatCount="indefinite"/>
-            </path>
-        </g>
-        <line x1="20" y1="28" x2="110" y2="28" 
-            stroke="#22d3ee" 
-            stroke-width="0.75"/>
-    </svg>
+                        <svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+    <!-- Logo Text -->
+    <text x="20" y="35" 
+          font-family="Arial, sans-serif" 
+          font-size="22" 
+          font-weight="bold" 
+          fill="#60a5fa">
+        Tech<tspan fill="#ff8c00">Fix</tspan>
+    </text>
+    
+    <!-- Person at Computer Icon -->
+    <g transform="translate(120, 30)">
+        <!-- Computer Monitor -->
+        <rect x="-15" y="-10" width="30" height="20" rx="2" fill="#333333" stroke="#ff8c00" stroke-width="1.5"/>
+        <rect x="-12" y="-7" width="24" height="14" fill="#ff8c00" opacity="0.3"/>
+        
+        <!-- Computer Stand -->
+        <rect x="-5" y="10" width="10" height="3" fill="#333333"/>
+        <rect x="-7" y="13" width="14" height="1" fill="#333333"/>
+        
+        <!-- Person -->
+        <circle cx="-20" cy="0" r="8" fill="#333333"/> <!-- Head -->
+        <path d="M -20,8 L -20,15 L -8,15 L -8,5" stroke="#333333" stroke-width="3" fill="none"/> <!-- Body -->
+        <path d="M -18,5 L -25,0" stroke="#333333" stroke-width="2"/> <!-- Arm -->
+        <path d="M -25,0 L -15,-5" stroke="#333333" stroke-width="1.5"/> <!-- Hand on keyboard -->
+        
+        <!-- Glow Effect -->
+        <circle cx="0" cy="0" r="25" fill="#ff8c00" opacity="0.1">
+            <animate attributeName="opacity" 
+                     values="0.1;0.2;0.1" 
+                     dur="3s" 
+                     repeatCount="indefinite"/>
+        </circle>
+    </g>
+    
+    <!-- Underline -->
+    <line x1="20" y1="40" x2="160" y2="40" 
+          stroke="#ff8c00" 
+          stroke-width="1"/>
+</svg>
+
                         <h1><span>Ehy </span>I’m Eugenio &</h1>
                          <div class="field">
                             <h2 class="typed-text">This is my Website</h2>
