@@ -76,6 +76,8 @@ workElements.forEach((item) => {
         document.querySelector('#workModal .modal-body .completed .value').innerText = item.getAttribute('data-completed')
         document.querySelector('#workModal .modal-body .skills .value').innerText = item.getAttribute('data-skills')
         document.querySelector('#workModal .modal-body .project-link a').setAttribute('href', item.getAttribute('data-project-link'))
+        document.querySelector('#workModal .modal-body .project-link a').setAttribute('target', '_blank');
+
 
         workModal.show();
     })
