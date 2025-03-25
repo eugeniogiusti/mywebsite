@@ -147,3 +147,28 @@ function toggleMode() {
 
     document.querySelector('html').setAttribute("theme", theme)
 }
+
+fetch('assets/blog/posts.json')
+  .then(res => res.json())
+  .then(articles => {
+    const container = document.getElementById('blog-articles');
+    articles.forEach(article => {
+      const col = document.createElement('div');
+      col.className = 'col-md-6 col-lg-4 mb-4';
+
+      col.innerHTML = `
+        <div class="card card-gradient h-100">
+          <img src="${article.image}" class="card-img-top" alt="${article.title}">
+          <div class="card-body">
+            <h5 class="card-title">${article.title}</h5>
+            <p class="card-text">${article.description}</p>
+            <a href="${article.link}" target="_blank" class="btn btn-primary">Read more</a>
+          </div>
+          <div class="card-footer text-muted">${article.date}</div>
+        </div>
+      `;
+
+      container.appendChild(col);
+    });
+  })
+  .catch(error => console.error("Error loading blog posts:", error));
