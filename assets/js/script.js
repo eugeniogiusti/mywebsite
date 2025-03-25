@@ -172,3 +172,21 @@ fetch('assets/blog/posts.json')
     });
   })
   .catch(error => console.error("Error loading blog posts:", error));
+
+  // Handle direct URL access with #hash (deep linking)
+window.addEventListener('DOMContentLoaded', () => {
+    const hash = window.location.hash;
+  
+    if (hash) {
+      // Rimuove classe active da tutti
+      document.querySelectorAll('nav ul li a.active').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('main > section.active').forEach(el => el.classList.remove('active'));
+  
+      // Aggiunge classe active all'elemento giusto
+      const navLink = document.querySelector(`nav ul li a[href='${hash}']`);
+      const targetSection = document.querySelector(`main > section${hash}`);
+  
+      if (navLink) navLink.classList.add('active');
+      if (targetSection) targetSection.classList.add('active');
+    }
+  });  
